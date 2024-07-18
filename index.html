@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="header-left"></div>
+            <nav class="header-middle">
+                <ul>
+                    <li class="active"><a href="#">Dashboard</a></li>
+                    <li><a href="#">Records</a></li>
+                    <li><a href="#">Appointments</a></li>
+                </ul>
+            </nav>
+            <div class="header-right profile">
+                <img src="images/senior-woman-doctor-and-portrait-smile.png" alt="Profile Picture" id="dr-profile-picture">
+                <span id="dr-name">Dr. Jose Simmons</span>
+            </div>
+        </header>
+
+        <div style="display: none;">
+            <img src="vectors/FemaleIcon.svg" alt="Profile Picture" id="profilePicture">
+            <span id="profileName"></span>
+        </div>
+
+        
+        <main class="content">
+            <aside class="profile-sidebar">
+                <div class="profile-card">
+                    <img src="images/Layer 2.png" alt="Profile Picture" id="profileCardPicture">
+                    <h2 id="profileCardName"></h2>
+                    <p>Age: <span id="profileCardAge"></span></p>
+                    <p>Insurance: <span id="profileCardInsurance"></span></p>
+                </div>
+    
+                <div class="lab-results">
+                    <div class="lab-results-content">
+                        <h2>Lab Results</h2>
+                        <ul id="labResults"></ul>
+                    </div>
+                </div>
+            </aside>
+            <section class="bg">
+                <div class="diagnosis-history">
+                    <h2>Diagnosis History</h2>
+                    <div class="chart">
+                        <canvas id="bloodPressureChart"></canvas>
+                    </div>
+                </div>
+                <section class="vitals">
+                    <div class="vital-sign vital-sign-res">
+                        <img src="vectors/respiratory rate.svg" alt="Respiratory Rate Icon">
+                        <p>Respiratory Rate</p>
+                        <h3>20 bpm</h3>
+                        <p>Normal</p>
+                    </div>
+                    <div class="vital-sign vital-sign-temp">
+                        <img src="vectors/temperature.svg" alt="Temperature Icon">
+                        <p>Temperature</p>
+                        <h3>98.6°F</h3>
+                        <p>Normal</p>
+                    </div>
+                    <div class="vital-sign vital-sign-heart">
+                        <img src="vectors/HeartBPM.svg" alt="Heart Rate Icon">
+                        <p>Heart Rate</p>
+                        <h3>78 bpm</h3>
+                        <p>Normal</p>
+                    </div>
+                </section>
+            </section>
+            
+
+            <section class="content2">
+                <div class="diagnostic-list">
+                    <h2>Diagnostic List</h2>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Description</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody id="diagnosticList"></tbody>
+                    </table>
+                </div>
+            </section>
+        </main>
+    </div>
+</body>
+</html>
